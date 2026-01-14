@@ -1,0 +1,4 @@
+  File "<stdin>", line 4
+    sed -i 's/height: 1e-6/height: 5e-6/g' somite_test.yml
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+SyntaxError: invalid syntax

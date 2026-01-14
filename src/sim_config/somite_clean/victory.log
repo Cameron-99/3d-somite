@@ -1,0 +1,259 @@
+nohup: ignoring input
+[betse] Welcome to <<BETSE 1.5.0 | CPython 3.13.5 | Linux 6.12.63+deb13-amd64>>.
+[betse] Loading third-party dependencies...
+[betse] Exiting prematurely due to fatal error:
+
+BetsePathException: Path "somite_clean.yml" already exists.
+
+Traceback (most recent call last):
+  File "/home/cameron/betse-env/lib/python3.13/site-packages/betse/util/cli/cliabc.py", line 180, in run
+    profile_callable(
+    ~~~~~~~~~~~~~~~~^
+        call=self._do,
+        ^^^^^^^^^^^^^^
+        profile_type=self._profile_type,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        profile_filename=self._profile_filename,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "<@beartype(betse.util.py.pyprofile.profile_callable) at 0x7f3bf5852200>", line 131, in profile_callable
+  File "/home/cameron/betse-env/lib/python3.13/site-packages/betse/util/py/pyprofile.py", line 195, in profile_callable
+    return profiler(
+        call=call,
+    ...<3 lines>...
+        profile_filename=profile_filename,
+    )
+  File "/home/cameron/betse-env/lib/python3.13/site-packages/betse/util/py/pyprofile.py", line 216, in _profile_callable_none
+    return call(*args, **kwargs)
+  File "/home/cameron/betse-env/lib/python3.13/site-packages/betse/util/cli/clicmdabc.py", line 95, in _do
+    self._run_subcommand(
+    ~~~~~~~~~~~~~~~~~~~~^
+        arg_parser=self._arg_parser_top,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        subcommander=self._subcommander_top,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        subcommand_method_name_prefix='_do_',
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "<@beartype(betse.util.cli.clicmdabc.CLISubcommandableABC._run_subcommand) at 0x7f3bf58651c0>", line 69, in _run_subcommand
+  File "/home/cameron/betse-env/lib/python3.13/site-packages/betse/util/cli/clicmdabc.py", line 187, in _run_subcommand
+    return subcommand_method()
+  File "<@beartype(betse.cli.climain.BetseCLI._do_config) at 0x7f3bf58be200>", line 12, in _do_config
+  File "/home/cameron/betse-env/lib/python3.13/site-packages/betse/cli/climain.py", line 366, in _do_config
+    Parameters().copy_default(trg_conf_filename=self._args.conf_filename)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<@beartype(betse.lib.yaml.abc.yamlfileabc.YamlFileDefaultABC.copy_default) at 0x7f3bf4614900>", line 33, in copy_default
+  File "/home/cameron/betse-env/lib/python3.13/site-packages/betse/lib/yaml/abc/yamlfileabc.py", line 523, in copy_default
+    self.copy(
+    ~~~~~~~~~^
+        src_conf_filename=self.conf_default_filename,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        trg_conf_filename=trg_conf_filename,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        **kwargs
+        ^^^^^^^^
+    )
+    ^
+  File "<@beartype(betse.lib.yaml.abc.yamlfileabc.YamlFileABC.copy) at 0x7f3bf45ebe20>", line 51, in copy
+  File "/home/cameron/betse-env/lib/python3.13/site-packages/betse/lib/yaml/abc/yamlfileabc.py", line 408, in copy
+    self.save(trg_conf_filename, **kwargs)
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<@beartype(betse.lib.yaml.abc.yamlfileabc.YamlFileABC.save) at 0x7f3bf45ebce0>", line 69, in save
+  File "/home/cameron/betse-env/lib/python3.13/site-packages/betse/lib/yaml/abc/yamlfileabc.py", line 298, in save
+    yamls.save(
+    ~~~~~~~~~~^
+        container=self.conf,
+        ^^^^^^^^^^^^^^^^^^^^
+        filename=conf_filename,
+        ^^^^^^^^^^^^^^^^^^^^^^^
+        is_overwritable=is_conf_file_overwritable,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "<@beartype(betse.lib.yaml.yamls.save) at 0x7f3bf572fd80>", line 72, in save
+  File "/home/cameron/betse-env/lib/python3.13/site-packages/betse/lib/yaml/yamls.py", line 132, in save
+    with iofiles.writing_chars(
+         ~~~~~~~~~~~~~~~~~~~~~^
+        filename=filename, is_overwritable=is_overwritable) as yaml_file:
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<@beartype(betse.util.io.iofiles.writing_chars) at 0x7f3bf5568180>", line 68, in writing_chars
+  File "/home/cameron/betse-env/lib/python3.13/site-packages/betse/util/io/iofiles.py", line 384, in writing_chars
+    paths.die_if_path(filename)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "<@beartype(betse.util.path.paths.die_if_path) at 0x7f3bf44f8540>", line 23, in die_if_path
+  File "/home/cameron/betse-env/lib/python3.13/site-packages/betse/util/path/paths.py", line 36, in die_if_path
+    raise BetsePathException(
+        'Path "{}" already exists.'.format(pathname))
+
+ABORTED effort:
+Close all that you have.
+You ask way too much.
+[betse] Welcome to <<BETSE 1.5.0 | CPython 3.13.5 | Linux 6.12.63+deb13-amd64>>.
+[betse] Loading third-party dependencies...
+[betse] Exiting prematurely due to fatal error:
+
+BetseFileException: File "/home/cameron/betse-paper2/src/sim_config/somite_clean/extra_configs/expression_data.yaml" not found or unreadable.
+
+Traceback (most recent call last):
+  File "/home/cameron/betse-env/lib/python3.13/site-packages/betse/util/cli/cliabc.py", line 180, in run
+    profile_callable(
+    ~~~~~~~~~~~~~~~~^
+        call=self._do,
+        ^^^^^^^^^^^^^^
+        profile_type=self._profile_type,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        profile_filename=self._profile_filename,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "<@beartype(betse.util.py.pyprofile.profile_callable) at 0x7fe026442200>", line 131, in profile_callable
+  File "/home/cameron/betse-env/lib/python3.13/site-packages/betse/util/py/pyprofile.py", line 195, in profile_callable
+    return profiler(
+        call=call,
+    ...<3 lines>...
+        profile_filename=profile_filename,
+    )
+  File "/home/cameron/betse-env/lib/python3.13/site-packages/betse/util/py/pyprofile.py", line 216, in _profile_callable_none
+    return call(*args, **kwargs)
+  File "/home/cameron/betse-env/lib/python3.13/site-packages/betse/util/cli/clicmdabc.py", line 95, in _do
+    self._run_subcommand(
+    ~~~~~~~~~~~~~~~~~~~~^
+        arg_parser=self._arg_parser_top,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        subcommander=self._subcommander_top,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        subcommand_method_name_prefix='_do_',
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "<@beartype(betse.util.cli.clicmdabc.CLISubcommandableABC._run_subcommand) at 0x7fe0264591c0>", line 69, in _run_subcommand
+  File "/home/cameron/betse-env/lib/python3.13/site-packages/betse/util/cli/clicmdabc.py", line 187, in _run_subcommand
+    return subcommand_method()
+  File "/home/cameron/betse-env/lib/python3.13/site-packages/betse/cli/climain.py", line 374, in _do_seed
+    return self._sim_runner.seed()
+           ^^^^^^^^^^^^^^^^
+  File "<@beartype(betse.cli.climain.BetseCLI._sim_runner) at 0x7fe0264b20c0>", line 12, in _sim_runner
+  File "<string>", line 7, in property_method_cached
+  File "/home/cameron/betse-env/lib/python3.13/site-packages/betse/cli/climain.py", line 303, in _sim_runner
+    p = Parameters.make(conf_filename=self._args.conf_filename)
+  File "<@beartype(betse.lib.yaml.abc.yamlfileabc.YamlFileABC.make) at 0x7fe0251df740>", line 33, in make
+  File "/home/cameron/betse-env/lib/python3.13/site-packages/betse/lib/yaml/abc/yamlfileabc.py", line 82, in make
+    yaml_file_conf.load(conf_filename)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "<@beartype(betse.science.parameters.Parameters.load) at 0x7fe02509f6a0>", line 12, in load
+  File "/home/cameron/betse-env/lib/python3.13/site-packages/betse/science/parameters.py", line 792, in load
+    self.expression_data = yamls.load(
+                           ~~~~~~~~~~^
+        filename=self.expression_data_path,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        yaml_version=YAML_VERSION)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<@beartype(betse.lib.yaml.yamls.load) at 0x7fe02537cf40>", line 54, in load
+  File "/home/cameron/betse-env/lib/python3.13/site-packages/betse/lib/yaml/yamls.py", line 66, in load
+    with iofiles.reading_chars(filename) as yaml_file:
+         ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "<@beartype(betse.util.io.iofiles.reading_chars) at 0x7fe02613fba0>", line 50, in reading_chars
+  File "/home/cameron/betse-env/lib/python3.13/site-packages/betse/util/io/iofiles.py", line 196, in reading_chars
+    files.die_unless_file(filename)
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "<@beartype(betse.util.path.files.die_unless_file) at 0x7fe026485f80>", line 23, in die_unless_file
+  File "/home/cameron/betse-env/lib/python3.13/site-packages/betse/util/path/files.py", line 74, in die_unless_file
+    raise BetseFileException(
+        'File "{}" not found or unreadable.'.format(pathname))
+
+The above exception wrapped the following originating exception:
+
+AttributeError: 'BetseCLI' object has no attribute '_betse_cached__property__sim_runner'. Did you mean: '_betse_cached__property__help_epilog'?
+
+Traceback (most recent call last):
+  File "<string>", line 5, in property_method_cached
+
+Technical support
+would be a flowing source of
+sweet commiseration.
+[betse] Welcome to <<BETSE 1.5.0 | CPython 3.13.5 | Linux 6.12.63+deb13-amd64>>.
+[betse] Loading third-party dependencies...
+[betse] Exiting prematurely due to fatal error:
+
+BetseFileException: File "/home/cameron/betse-paper2/src/sim_config/somite_clean/extra_configs/expression_data.yaml" not found or unreadable.
+
+Traceback (most recent call last):
+  File "/home/cameron/betse-env/lib/python3.13/site-packages/betse/util/cli/cliabc.py", line 180, in run
+    profile_callable(
+    ~~~~~~~~~~~~~~~~^
+        call=self._do,
+        ^^^^^^^^^^^^^^
+        profile_type=self._profile_type,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        profile_filename=self._profile_filename,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "<@beartype(betse.util.py.pyprofile.profile_callable) at 0x7ffb0084a200>", line 131, in profile_callable
+  File "/home/cameron/betse-env/lib/python3.13/site-packages/betse/util/py/pyprofile.py", line 195, in profile_callable
+    return profiler(
+        call=call,
+    ...<3 lines>...
+        profile_filename=profile_filename,
+    )
+  File "/home/cameron/betse-env/lib/python3.13/site-packages/betse/util/py/pyprofile.py", line 216, in _profile_callable_none
+    return call(*args, **kwargs)
+  File "/home/cameron/betse-env/lib/python3.13/site-packages/betse/util/cli/clicmdabc.py", line 95, in _do
+    self._run_subcommand(
+    ~~~~~~~~~~~~~~~~~~~~^
+        arg_parser=self._arg_parser_top,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        subcommander=self._subcommander_top,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        subcommand_method_name_prefix='_do_',
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "<@beartype(betse.util.cli.clicmdabc.CLISubcommandableABC._run_subcommand) at 0x7ffb008611c0>", line 69, in _run_subcommand
+  File "/home/cameron/betse-env/lib/python3.13/site-packages/betse/util/cli/clicmdabc.py", line 187, in _run_subcommand
+    return subcommand_method()
+  File "/home/cameron/betse-env/lib/python3.13/site-packages/betse/cli/climain.py", line 390, in _do_sim
+    return self._sim_runner.sim()
+           ^^^^^^^^^^^^^^^^
+  File "<@beartype(betse.cli.climain.BetseCLI._sim_runner) at 0x7ffb008ba0c0>", line 12, in _sim_runner
+  File "<string>", line 7, in property_method_cached
+  File "/home/cameron/betse-env/lib/python3.13/site-packages/betse/cli/climain.py", line 303, in _sim_runner
+    p = Parameters.make(conf_filename=self._args.conf_filename)
+  File "<@beartype(betse.lib.yaml.abc.yamlfileabc.YamlFileABC.make) at 0x7ffaff5eb740>", line 33, in make
+  File "/home/cameron/betse-env/lib/python3.13/site-packages/betse/lib/yaml/abc/yamlfileabc.py", line 82, in make
+    yaml_file_conf.load(conf_filename)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "<@beartype(betse.science.parameters.Parameters.load) at 0x7ffaff4ab6a0>", line 12, in load
+  File "/home/cameron/betse-env/lib/python3.13/site-packages/betse/science/parameters.py", line 792, in load
+    self.expression_data = yamls.load(
+                           ~~~~~~~~~~^
+        filename=self.expression_data_path,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        yaml_version=YAML_VERSION)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<@beartype(betse.lib.yaml.yamls.load) at 0x7ffaff788f40>", line 54, in load
+  File "/home/cameron/betse-env/lib/python3.13/site-packages/betse/lib/yaml/yamls.py", line 66, in load
+    with iofiles.reading_chars(filename) as yaml_file:
+         ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "<@beartype(betse.util.io.iofiles.reading_chars) at 0x7ffb00547ba0>", line 50, in reading_chars
+  File "/home/cameron/betse-env/lib/python3.13/site-packages/betse/util/io/iofiles.py", line 196, in reading_chars
+    files.die_unless_file(filename)
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "<@beartype(betse.util.path.files.die_unless_file) at 0x7ffb0088df80>", line 23, in die_unless_file
+  File "/home/cameron/betse-env/lib/python3.13/site-packages/betse/util/path/files.py", line 74, in die_unless_file
+    raise BetseFileException(
+        'File "{}" not found or unreadable.'.format(pathname))
+
+The above exception wrapped the following originating exception:
+
+AttributeError: 'BetseCLI' object has no attribute '_betse_cached__property__sim_runner'. Did you mean: '_betse_cached__property__help_epilog'?
+
+Traceback (most recent call last):
+  File "<string>", line 5, in property_method_cached
+
+An old CPU.
+A new program is loaded.
+The sound of crashing.
+MONTH 1 COMPLETE: 154-cell 3D HCN2 somite

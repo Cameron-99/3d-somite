@@ -1,0 +1,36 @@
+world options:
+  size: 125e-6          # 154-cell geometry (Month 1 validated)
+  height: 5e-6          # 3D somite stack
+  
+internal parameters:
+  sim time: 3600        # Steady-state convergence (1hr bioelectric)
+  
+features:
+  # ROSTRAL HIGH HCN2 → AP AXIS FORMATION
+  - name: rostral_somite
+    cells: "left_rect(0.3)"        # Left 30% = head-end
+    channels:
+      HCN2: 
+        density: 1.20             # -45mV (YOUR Bioelectricity discovery)
+    gap junctions:
+      gj_avg: 1.0                # Somite coupling
+      
+  # CAUDAL LOW HCN2 → GRADIENT DRIVE  
+  - name: caudal_somite
+    cells: "right_rect(0.3)"       # Right 30% = tail-end
+    channels:
+      HCN2: 
+        density: 0.30             # -30mV (project spec: 1.2→0.3 nS/pF)
+    gap junctions:
+      gj_avg: 1.0 
+  
+  # FLANK BASELINE (non-somite)
+  - name: flank_tissue
+    cells: "*"                     # Everything else  
+    channels:
+      HCN2: 
+        density: 0.10             # -20mV (YOUR baseline)
+
+channels:
+  HCN2:
+    gna: 1.20                     # Scale validated

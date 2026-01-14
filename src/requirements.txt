@@ -1,0 +1,5 @@
+betse==1.5.0
+PyYAML==6.0.3
+deap==1.4.1
+numpy
+matplotlib
