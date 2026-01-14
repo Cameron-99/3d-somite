@@ -1,0 +1,27 @@
+# 3D Somite HCN2 Axis Formation (Dev Dyn Fig.2 validation)
+world:
+  nx: 5      # AP axis (rostral→caudal)
+  ny: 11     # ML axis  
+  nz: 3      # DV height (flattened somite)
+  dx: 25e-6  # 25μm cubic cells
+
+cells:
+  type: cubic
+  density: 1.0  # Fully packed somite
+
+ion_channels:
+  HCN2:
+    rostral: 1.2e-9   # 1.2 nS/pF (first 2 AP layers)
+    flank:   0.1e-9   # 0.1 nS/pF (middle AP layers) 
+    caudal:  0.3e-9   # 0.3 nS/pF (last 2 AP layers)
+
+gap_junctions:
+  gj_avg: 0.5  # Moderate coupling for Fig.3A
+
+sim:
+  t_final: 3600  # 1 hour steady state
+  dt: 0.1
+  
+plot:
+  vmem: true
+  hcn2: true
